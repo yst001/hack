@@ -1,0 +1,7 @@
+nav, article, aside, footer {
+    background-color: white;
+    padding: 1%;
+}
+article {
+    flex: 4;
+}
