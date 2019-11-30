@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="editorlatex/css/bootstrap-conbined.min.css" />
+		<link rel="stylesheet" href="editorlatex/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="editorlatex/css/bootstrap-theme.min.css" />
+		<script src="editorlatex/js/bootstrap.min.js"></script>
+		<script src="editorlatex/js/jquery-3.4.1.min.js"></script>
+		<link href="editorlatex/style/default.css" rel="stylesheet" media="screen" type="text/css" />
+		<script type="text/javascript" src="editorlatex/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="editorlatex/JMEditor.js"></script>
+		<script type="text/javascript" src="editorlatex/js/vue.min.js"></script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+		<meta charset="utf-8">
+		<title>在线公式编辑器</title>
+		<style type="text/css">
+			.MathJax{outline:0;}
+			.typing {
+			    width: 6em;
+			    white-space: nowrap;
+			    border-right: 2px solid transparent;
+			    animation: typing 3.5s steps(15, end), blink-caret .75s step-end infinite;
+			    overflow: hidden;
+			}
+			/* 打印效果 */
+			@keyframes typing {
+			  from { width: 0; }
+			  to { width: 6em; }
+			}
+			/* 光标闪啊闪 */
+			@keyframes blink-caret {
+			  from, to { box-shadow: 1px 0 0 0 transparent; }
+			  50% { box-shadow: 1px 0 0 0; }
+			}
+		</style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="page-header">
+					<h1>
+						<div class="typing">在线公式编辑<div>							
+						</div>
+					</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span6">
+				<button class="btn" onclick="bt1('\\alpha&nbsp')"><span class="formula">`\alpha`</span></button>
+				<button class="btn" onclick="bt1('\\beta&nbsp')"><span class="formula">`\beta`</span></button>
+				<button class="btn" onclick="bt1('\\gamma&nbsp')"><span class="formula">`\gamma`</span></button>
+				<button class="btn" onclick="bt1('\\delta&nbsp')"><span class="formula">`\delta`</span></button>
+				<button class="btn" onclick="bt1('\\epsilon&nbsp')"><span class="formula">`\epsilon`</span></button>
+				<button class="btn" onclick="bt1('o&nbsp')"><span class="formula">`o`</span></button>
+				<button class="btn" onclick="bt1('\\pi&nbsp')"><span class="formula">`\pi`</span></button>
+				<button class="btn" onclick="bt1('\\rho&nbsp')"><span class="formula">`\rho`</span></button>
+				<button class="btn" onclick="bt1('\\sigma&nbsp')"><span class="formula">`\sigma`</span></button>
+				<button class="btn" onclick="bt1('\\tau&nbsp')"><span class="formula">`\tau`</span></button>
+				<button class="btn" onclick="bt1('\\upsilon&nbsp')"><span class="formula">`\upsilon`</span></button>
+				<button class="btn" onclick="bt1('\\phi&nbsp')"><span class="formula">`\phi`</span></button>
+				<button class="btn" onclick="bt1('\\varphi&nbsp')"><span class="formula">`\varphi`</span></button>
+				<button class="btn" onclick="bt1('\\chi&nbsp')"><span class="formula">`\chi`</span></button>
+				<button class="btn" onclick="bt1('\\psi&nbsp')"><span class="formula">`\psi`</span></button>
+				<button class="btn" onclick="bt1('\\omega&nbsp')"><span class="formula">`\omega`</span></button>
+				<br />
+				<button class="btn" onclick="bt1('\\Gamma&nbsp')"><span class="formula">`\Gamma`</span></button>
+				<button class="btn" onclick="bt1('\\Delta&nbsp')"><span class="formula">`\Delta`</span></button>
+				<button class="btn" onclick="bt1('\\Theta&nbsp')"><span class="formula">`\Theta`</span></button>
+				<button class="btn" onclick="bt1('\\Lambda&nbsp')"><span class="formula">`\Lambda`</span></button>
+				<button class="btn" onclick="bt1('\\Xi&nbsp')"><span class="formula">`\Xi`</span></button>
+				<button class="btn" onclick="bt1('\\Pi&nbsp')"><span class="formula">`\Pi`</span></button>
+				<button class="btn" onclick="bt1('\\Sigma&nbsp')"><span class="formula">`\Sigma`</span></button>
+				<button class="btn" onclick="bt1('\\Phi&nbsp')"><span class="formula">`\Phi`</span></button>
+				<button class="btn" onclick="bt1('\\Psi&nbsp')"><span class="formula">`\Psi`</span></button>
+				<button class="btn" onclick="bt1('\\Omega&nbsp')"><span class="formula">`\Omega`</span></button>
+				<br />
+				<button class="btn" onclick="bt1('\\hat\{')"><span class="formula">`\hat{a}`</span></button>
+				<button class="btn" onclick="bt1('\\bar\{')"><span class="formula">`\bar{a}`</span></button>
+				<button class="btn" onclick="bt1('\\dot\{')"><span class="formula">`\dot{a}`</span></button>
+				<button class="btn" onclick="bt1('\\vec\{')"><span class="formula">`\vec{a}`</span></button>
+				<button class="btn" onclick="bt1('\\tilde\{')"><span class="formula">`\tilde{a}`</span></button>
+				<button class="btn" onclick="bt1('\\ddot\{')"><span class="formula">`\ddot{a}`</span></button>
+				<button class="btn" onclick="bt1('\\hat\{')"><span class="formula">`\hat{a}`</span></button>
+				<button class="btn" onclick="bt1('\^')"><span class="formula">`\a^b`</span></button>
+				<button class="btn" onclick="bt1('\_')"><span class="formula">`\a_b`</span></button>
+				<br />
+				<button class="btn" onclick="bt1('\\le&nbsp')"><span class="formula">`\le`</span></button>
+				<button class="btn" onclick="bt1('\\prec&nbsp')"><span class="formula">`\prec`</span></button>
+				<button class="btn" onclick="bt1('\\preceq&nbsp')"><span class="formula">`\preceq`</span></button>
+				<button class="btn" onclick="bt1('\\subset&nbsp')"><span class="formula">`\subset`</span></button>
+				<button class="btn" onclick="bt1('\\subseteq&nbsp')"><span class="formula">`\subseteq`</span></button>
+				<button class="btn" onclick="bt1('\\in&nbsp')"><span class="formula">`\in`</span></button>
+				<button class="btn" onclick="bt1('\\ge&nbsp')"><span class="formula">`\ge`</span></button>
+				<button class="btn" onclick="bt1('\\succ&nbsp')"><span class="formula">`\succ`</span></button>
+				<button class="btn" onclick="bt1('\\succeq&nbsp')"><span class="formula">`\succeq`</span></button>
+				<button class="btn" onclick="bt1('\\supset&nbsp')"><span class="formula">`\supset`</span></button>
+				<button class="btn" onclick="bt1('\\supseteq&nbsp')"><span class="formula">`\supseteq`</span></button>
+				<button class="btn" onclick="bt1('\\vdash&nbsp')"><span class="formula">`\vdash`</span></button>
+				<button class="btn" onclick="bt1('\\notin&nbsp')"><span class="formula">`\notin`</span></button>
+				<button class="btn" onclick="bt1('\\equiv&nbsp')"><span class="formula">`\equiv`</span></button>
+				<button class="btn" onclick="bt1('\\cong&nbsp')"><span class="formula">`\cong`</span></button>
+				<button class="btn" onclick="bt1('\\approx&nbsp')"><span class="formula">`\approx`</span></button>
+				<button class="btn" onclick="bt1('\\ne&nbsp')"><span class="formula">`\ne`</span></button>
+				<br />
+				<button class="btn" onclick="bt1('\\pm&nbsp')"><span class="formula">`\pm`</span></button>
+				<button class="btn" onclick="bt1('\\cdot&nbsp')"><span class="formula">`\cdot`</span></button>
+				<button class="btn" onclick="bt1('\\times&nbsp')"><span class="formula">`\times`</span></button>
+				<button class="btn" onclick="bt1('\\cup&nbsp')"><span class="formula">`\cup`</span></button>
+				<button class="btn" onclick="bt1('\\oplus&nbsp')"><span class="formula">`\oplus`</span></button>
+				<button class="btn" onclick="bt1('\\otimes&nbsp')"><span class="formula">`\otimes`</span></button>
+				<button class="btn" onclick="bt1('\\div&nbsp')"><span class="formula">`\div`</span></button>
+				<button class="btn" onclick="bt1('\\cap&nbsp')"><span class="formula">`\cap`</span></button>
+				<button class="btn" onclick="bt1('\\wedge&nbsp')"><span class="formula">`\wedge`</span></button>
+				<button class="btn" onclick="bt1('\\star&nbsp')"><span class="formula">`\star`</span></button>
+				<button class="btn" onclick="bt1('\\ast&nbsp')"><span class="formula">`\ast`</span></button>
+				<button class="btn" onclick="bt1('\\circ&nbsp')"><span class="formula">`\circ`</span></button>
+				<button class="btn" onclick="bt1('\\diamond&nbsp')"><span class="formula">`\diamond`</span></button>
+				<br />
+				<button class="btn" onclick="bt1('\\sum&nbsp')"><span class="formula">`\sum`</span></button>
+				<button class="btn" onclick="bt1('\\prod&nbsp')"><span class="formula">`\prod`</span></button>
+				<button class="btn" onclick="bt1('\\int&nbsp')"><span class="formula">`\int`</span></button>
+				<button class="btn" onclick="bt1('\\bigcup&nbsp')"><span class="formula">`\bigcup`</span></button>
+				<button class="btn" onclick="bt1('\\bigcap&nbsp')"><span class="formula">`\bigcap`</span></button>
+				<button class="btn" onclick="bt1('\\oint&nbsp')"><span class="formula">`\oint`</span></button>
+				<button class="btn" onclick="bt1('\\bigvee&nbsp')"><span class="formula">`\bigvee`</span></button>
+				<button class="btn" onclick="bt1('\\bigwedge&nbsp')"><span class="formula">`\bigwedge`</span></button>
+				<br />
+				<input id="tt1" type="text" class="form-control" style="height: 200px ;float: left;"/>
+				<br />
+			</div>
+			<div class="span6">
+				<span >在下面输入latex公式，可直接转化为公式图片： </span>
+				<br />
+				<span class="mathquill-editable"></span>
+				<br />
+				<br />
+				<br />
+				<ul class="nav nav-list"><li class="divider"></li></ul>
+				<p>
+				下面是公式编辑器。
+				</p>
+				<p>
+					<div id="content" contentEditable="true" class="editDemo" >
+						
+					</div>
+				</p>
+					<input type="button" class="btn" onclick="window.open('view.html');" value="在新窗口中预览">
+			</div>
+		</div>
+	</div>
+	
+	
+	<script>
+		var t1=document.getElementById("tt1");
+		var m1=document.getElementById("math1");
+		function bt1(t){
+			t1.value=t1.value+t;
+			alert(vm.wy1);
+			MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+			vm.wy1=t1.value;
+			}
+	</script>
+
+
+
+	<style type="text/css">
+		.side-bar a,.chat-tips i {background: url(editorlatex/images/right_bg.png) no-repeat;}
+		.side-bar {width: 66px;position: fixed;bottom: 20px;right: 25px;font-size: 0;line-height: 0;z-index: 100;}
+		.side-bar a {width: 66px;height: 66px;display: inline-block;background-color: #ddd;margin-bottom: 2px;}
+		.side-bar a:hover {background-color: #669fdd;}
+		.side-bar .icon-qq {background-position: 0 -62px;}
+		.side-bar .icon-chat {background-position: 0 -130px;position: relative;}
+		.side-bar .icon-chat:hover .chat-tips {display: block;}
+		.side-bar .icon-blog {background-position: 0 -198px;}
+		.side-bar .icon-mail {background-position: 0 -266px;}
+		.side-bar .icon-totop {background-position: 0 -334px;}
+		.chat-tips {padding: 20px;border: 1px solid #d1d2d6;position: absolute;right: 78px;top: -55px;background-color: #fff;display: none;}
+		.chat-tips i {width: 9px;height: 16px;display: inline-block;position: absolute;right: -9px;top: 80px;background-position:-88px -350px;}
+		.chat-tips img {width: 138px;height: 138px;}
+	</style>
+
+	</div>
+	<div class="side-bar">
+		<a href="index.html" class="icon-qq">主页</a>
+		<a href="About.html" class="icon-chat">详细介绍</a>
+		<a target="_blank" href="main.html" class="icon-blog">在线工具</a>
+		<a href="Connect.html" class="icon-mail">联系我们</a>
+	</div>
+	</body>
+</html>

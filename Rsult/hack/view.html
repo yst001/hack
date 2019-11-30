@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>在线公式编辑器</title>
+<link href="editorlatex/style/default.css" rel="stylesheet" type="text/css" />
+<link href="editorlatex/mathquill-0.9.1/mathquill.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="editorlatex/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="body">
+			<div class="content">
+					<h1>内容预览</h1>
+					<p>
+						下面是您用在线公式编辑器的成果。
+					</p>
+					<p>
+						<div class="editDemo">
+							
+						</div>
+					</p>
+					<script type="text/javascript" >
+						$(".editDemo").html($("#content",opener.document).html());
+					</script>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
